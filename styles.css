@@ -148,6 +148,7 @@ a { color: var(--accent); text-decoration: none; }
 }
 .tag-prod { background: var(--ok-soft); color: var(--ok); }
 .tag-dev { background: var(--warn-soft); color: var(--warn); }
+.tag-po { background: var(--accent-soft); color: var(--accent); }
 
 .project-body { display: none; padding: 0 24px 24px; border-top: 1px solid var(--line); }
 .project.open .project-body { display: block; }
