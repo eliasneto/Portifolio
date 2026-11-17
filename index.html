@@ -273,6 +273,46 @@
       <article class="project">
         <button class="project-head" aria-expanded="false">
           <div class="project-title">
+            <span class="tag tag-prod">Em produção</span>
+            <h3>Central de Treinamentos</h3>
+            <p>Treinamentos em vídeo com questionário, prazo e certificado com validação pública.</p>
+          </div>
+          <div class="project-metric"><strong>v1.3.0</strong><span>em produção</span></div>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="project-body">
+          <div class="cols">
+            <div>
+              <h4>Problema</h4>
+              <p>Treinamentos obrigatórios (integridade, código de conduta, segurança da informação, RH, jurídico) eram distribuídos como vídeos soltos ou apresentações, sem garantia de que o colaborador assistiu, sem avaliação de aprendizado, sem controle de prazo e sem comprovante.</p>
+              <h4>Solução</h4>
+              <ul>
+                <li>Player dentro da ferramenta que <b>retoma de onde parou</b>, fecha o vídeo ao trocar de aba e impede adiantar além do ponto já assistido.</li>
+                <li>Questionários ao final ou em pontos escolhidos do vídeo, com <b>correção no servidor</b>, nota mínima e limite de tentativas.</li>
+                <li>Controle de quem vê cada treinamento (todos, grupos, equipes ou pessoas) e de quando (liberação e prazo).</li>
+                <li>Áreas como Jurídico e RH administram os próprios treinamentos: vídeo, perguntas, capítulos e legendas.</li>
+                <li><b>Certificados em PDF com QR code</b>, 4 modelos de layout, validade e validação pública sem login.</li>
+                <li>Acompanhamento da situação de cada usuário, com exportação para Excel.</li>
+                <li>Login pela rede (Active Directory), perfis de acesso e expiração de sessão por inatividade.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Resultados</h4>
+              <ul class="results">
+                <li>Comprovação de que o vídeo foi assistido e de que o conteúdo foi aprendido</li>
+                <li>Controle de prazo e situação de cada colaborador</li>
+                <li>Certificado verificável por qualquer pessoa pelo QR code</li>
+              </ul>
+              <h4>Tecnologias</h4>
+              <ul class="stack"><li>Python</li><li>Django 5.2</li><li>MySQL</li><li>ReportLab</li><li>Gunicorn</li><li>Docker</li><li>Active Directory</li></ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <button class="project-head" aria-expanded="false">
+          <div class="project-title">
             <span class="tag tag-dev">Em desenvolvimento</span>
             <h3>AutoControllers — orquestrador de automações</h3>
             <p>Um só lugar para executar, acompanhar e auditar os robôs de cada setor.</p>
