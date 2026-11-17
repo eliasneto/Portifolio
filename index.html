@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elias Neto — Portfólio</title>
+<meta name="description" content="Portfólio de Elias Ferreira de Castro Neto: automação de processos, RPA, integrações com SAP, IXC e Microsoft 365.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="#inicio" class="brand"><span class="brand-mark">EN</span> Elias Neto</a>
+    <nav class="nav">
+      <a href="#projetos">Projetos</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#competencias">Competências</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <section class="hero wrap">
+    <p class="eyebrow">Fortaleza · CE</p>
+    <h1>Elias Ferreira de Castro Neto</h1>
+    <p class="role">Analista de Processos e Automação · RPA · Integrações · IA aplicada</p>
+    <p class="lead">
+      Transformo processos manuais em sistemas que rodam sozinhos: do mapeamento
+      AS IS / TO BE e das regras de negócio até o robô, a integração por API,
+      os testes, a homologação com a área e a sustentação em produção.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+      <a class="btn" href="#contato">Contato</a>
+    </div>
+
+    <ul class="stats">
+      <li><strong>2.622</strong><span>escolas atendidas no faturamento automatizado</span></li>
+      <li><strong>~7,2 mil</strong><span>notas fiscais anexadas por robô</span></li>
+      <li><strong>10,5 s</strong><span>para emitir uma NF de saída no SAP</span></li>
+      <li><strong>117</strong><span>regras de negócio documentadas em um único RPA</span></li>
+    </ul>
+  </section>
+
+  <section id="projetos" class="section wrap">
+    <div class="section-head">
+      <h2>Projetos</h2>
+      <p>Automações e sistemas desenvolvidos para as áreas Financeira, Pós-Venda e de operações. Clique em um projeto para ver os detalhes.</p>
+    </div>
+
+    <div class="projects">
+
+      <article class="project">
+        <button class="project-head" aria-expanded="false">
+          <div class="project-title">
+            <span class="tag tag-prod">Em produção</span>
+            <h3>Faturamento automático no SAP</h3>
+            <p>Do e-mail de solicitação à NF-e autorizada, sem digitação no ERP.</p>
+          </div>
+          <div class="project-metric"><strong>10,5 s</strong><span>por nota fiscal</span></div>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="project-body">
+          <div class="cols">
+            <div>
+              <h4>Problema</h4>
+              <p>O Financeiro lia os e-mails do Pós-Venda à mão, digitava os dados da planilha no SAP e conferia valores e produtos um a um. Erros comuns: valor diferente do pedido, CNPJ divergente, produto ou quantidade fora do pedido.</p>
+              <h4>Solução</h4>
+              <ul>
+                <li>Leitura automática da caixa de e-mail pela <b>Microsoft Graph API</b>, com filtro por remetente e código de rastreio.</li>
+                <li>Leitura da planilha anexada (uma aba = uma nota) com validação de CNPJ, município/UF e vencimento.</li>
+                <li>Conferência de cada nota com o pedido de venda no <b>SAP Business One</b>: valor, cliente, produto, quantidade e preço.</li>
+                <li>Emissão da NF de saída copiada da Entrega, acompanhamento da autorização da NF-e e geração do DANFE.</li>
+                <li>Resposta automática ao solicitante, na mesma conversa, com os PDFs e XMLs.</li>
+                <li>Perfis de acesso e log de atividades, de execuções de rotina e de chamadas HTTP.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Resultados</h4>
+              <ul class="results">
+                <li><b>10,5 segundos</b> por NF, com 12 chamadas ao SAP</li>
+                <li>Em produção desde outubro de 2026</li>
+                <li>Rastreabilidade completa de cada nota emitida</li>
+              </ul>
+              <h4>Tecnologias</h4>
+              <ul class="stack"><li>Python</li><li>Django</li><li>MySQL</li><li>Docker</li><li>SAP B1 Service Layer</li><li>Microsoft Graph</li></ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <button class="project-head" aria-expanded="false">
+          <div class="project-title">
+            <span class="tag tag-prod">Em operação</span>
+            <h3>Gerenciador Pós-Venda + RPA de faturamento</h3>
+            <p>Faturamento de um programa de conectividade de escolas públicas, escola por escola.</p>
+          </div>
+          <div class="project-metric"><strong>2.622</strong><span>escolas</span></div>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="project-body">
+          <div class="cols">
+            <div>
+              <h4>Problema</h4>
+              <p>Cada escola do programa exigia conferência do kit instalado, emissão de notas e envio de PDF e XML no portal do cliente — um trabalho repetitivo, em grande volume e sujeito a erro.</p>
+              <h4>Solução</h4>
+              <ul>
+                <li>Sistema de pós-venda que controla o faturamento por escola (código INEP).</li>
+                <li>Robô <b>Playwright</b> que opera o portal do cliente e anexa as notas fiscais.</li>
+                <li>Captura das respostas do Financeiro pela <b>Microsoft Graph API</b>.</li>
+                <li>Integração com o ERP <b>IXC Soft</b>.</li>
+                <li>Conferência em três lados antes de cada envio: kit declarado × IXC × relatório do cliente.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Resultados</h4>
+              <ul class="results">
+                <li><b>2.622 escolas</b> faturadas</li>
+                <li><b>~7,2 mil NFs</b> (PDF + XML) anexadas pelo robô</li>
+                <li><b>153 lotes</b> de faturamento processados</li>
+                <li><b>30 de 30</b> requisitos da v1 aceitos, com 18 itens além do escopo</li>
+                <li>~90 regras de negócio documentadas</li>
+              </ul>
+              <h4>Tecnologias</h4>
+              <ul class="stack"><li>Python</li><li>Django</li><li>Playwright</li><li>MySQL</li><li>Nginx</li><li>Docker</li><li>Microsoft Graph</li><li>API IXC</li></ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <button class="project-head" aria-expanded="false">
+          <div class="project-title">
+            <span class="tag tag-prod">Em uso</span>
+            <h3>Service Medição — RPA de medição de fornecedores</h3>
+            <p>Substituiu a planilha manual que alimentava o robô de medições.</p>
+          </div>
+          <div class="project-metric"><strong>117</strong><span>regras de negócio</span></div>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="project-body">
+          <div class="cols">
+            <div>
+              <h4>Problema</h4>
+              <p>As medições de fornecedores eram lançadas por um robô alimentado por uma planilha de 16 colunas preenchida à mão, sem controle de fila, de erros ou de acompanhamento do chamado.</p>
+              <h4>Solução</h4>
+              <ul>
+                <li>Cadastro centralizado de fornecedores, medições e itens medidos.</li>
+                <li>Robô <b>Selenium</b> no portal BlueEZ, com fila por usuário e execução assíncrona (Celery + Redis).</li>
+                <li>Credencial individual criptografada e parada automática após 5 erros seguidos.</li>
+                <li>Acompanhamento automático do chamado no <b>GLPI</b>.</li>
+                <li>Leitura automática de nota fiscal e boleto.</li>
+                <li>Login pelo Active Directory (LDAPS) e dashboard por setor exibido nas TVs da empresa.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Resultados</h4>
+              <ul class="results">
+                <li>Fim do preenchimento manual da planilha de 16 colunas</li>
+                <li><b>8 releases</b> entregues (v1.0 a v1.6)</li>
+                <li><b>117 regras de negócio</b> documentadas</li>
+                <li>Leitura de NF e boleto validada com <b>31 documentos reais</b></li>
+              </ul>
+              <h4>Tecnologias</h4>
+              <ul class="stack"><li>Python 3.12</li><li>Django 5</li><li>DRF</li><li>Selenium</li><li>Celery</li><li>Redis</li><li>HTMX</li><li>Tailwind</li><li>MySQL</li><li>Docker</li><li>GitHub Actions</li><li>LDAP</li></ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <button class="project-head" aria-expanded="false">
+          <div class="project-title">
+            <span class="tag tag-dev">Em desenvolvimento</span>
+            <h3>AutoControllers — orquestrador de automações</h3>
+            <p>Um só lugar para executar, acompanhar e auditar os robôs de cada setor.</p>
+          </div>
+          <div class="project-metric"><strong>3</strong><span>setores</span></div>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="project-body">
+          <div class="cols">
+            <div>
+              <h4>Problema</h4>
+              <p>Com várias automações em Python espalhadas por setores, faltava um ponto único para disparar execuções, ver o que falhou e saber quem executou o quê.</p>
+              <h4>Solução</h4>
+              <ul>
+                <li>Catálogo de automações por setor: Comercial, Financeiro e TI.</li>
+                <li>Execução manual ou por fila, com worker e retentativa.</li>
+                <li>Logs de cada execução, auditoria e dashboard por grupo.</li>
+                <li>API própria para integração com outros sistemas.</li>
+                <li>Login pelo Active Directory.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Resultados</h4>
+              <ul class="results">
+                <li>Padroniza a forma de rodar e monitorar os robôs</li>
+                <li>Histórico auditável de todas as execuções</li>
+              </ul>
+              <h4>Tecnologias</h4>
+              <ul class="stack"><li>Python</li><li>Django 6</li><li>MySQL</li><li>Playwright</li><li>Docker</li><li>Active Directory</li></ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="experiencia" class="section wrap">
+    <div class="section-head"><h2>Experiência</h2></div>
+    <ol class="timeline">
+      <li>
+        <span class="when">10/2025 — atual</span>
+        <h3>Analista de Projetos e Processos (Automação e Hiperautomação)</h3>
+        <p class="where">HowBe / Speed</p>
+        <p>Discovery de processos, viabilidade, desenho TO BE, PDD, regras de negócio, desenvolvimento de robôs e integrações, testes, homologação e sustentação.</p>
+      </li>
+      <li>
+        <span class="when">12/2023 — 08/2024</span>
+        <h3>Product Owner / Scrum Master</h3>
+        <p class="where">Secretaria Municipal da Saúde de Fortaleza</p>
+        <p>Levantamento de requisitos, backlog, implantação do Jira Software e rituais ágeis.</p>
+      </li>
+      <li>
+        <span class="when">05/2022 — 12/2023</span>
+        <h3>Analista de Requisitos</h3>
+        <p class="where">MOB Telecom / Alloha</p>
+        <p>Requisitos e regras de negócio para sistemas, portais, CRM e pagamentos; testes e homologação.</p>
+      </li>
+      <li>
+        <span class="when">07/2019 — 05/2022</span>
+        <h3>Analista de Processos e Projetos de TI</h3>
+        <p class="where">Qintess / Banco do Nordeste</p>
+        <p>Mapeamento de processos com base em ITIL, indicadores e análise de causa raiz.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="competencias" class="section wrap">
+    <div class="section-head"><h2>Competências</h2></div>
+    <div class="skills">
+      <div class="skill-card">
+        <h3>Automação e RPA</h3>
+        <ul class="stack"><li>Python</li><li>Playwright</li><li>Selenium</li><li>Celery</li><li>OCR</li><li>Agentes de IA</li></ul>
+      </div>
+      <div class="skill-card">
+        <h3>Integrações</h3>
+        <ul class="stack"><li>SAP Business One</li><li>IXC Soft</li><li>Microsoft Graph</li><li>GLPI</li><li>Jira Cloud</li><li>LDAP / AD</li></ul>
+      </div>
+      <div class="skill-card">
+        <h3>Desenvolvimento</h3>
+        <ul class="stack"><li>Django</li><li>FastAPI</li><li>MySQL</li><li>PostgreSQL</li><li>Docker</li><li>Git</li></ul>
+      </div>
+      <div class="skill-card">
+        <h3>Processos e gestão</h3>
+        <ul class="stack"><li>BPMN / Bizagi</li><li>AS IS / TO BE</li><li>PDD</li><li>ITIL 4</li><li>Scrum</li><li>Power BI</li></ul>
+      </div>
+    </div>
+    <p class="edu"><b>Formação:</b> Bacharelado em Engenharia de Software — UNOPAR (2025)</p>
+  </section>
+
+  <section id="contato" class="section wrap contact">
+    <h2>Contato</h2>
+    <p>Quer conversar sobre automação de processos ou algum dos projetos?</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:eliasnetoce@gmail.com">eliasnetoce@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/elias-ferreira-981a22160" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer wrap">
+  <p>© <span id="ano"></span> Elias Neto</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
