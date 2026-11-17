@@ -168,6 +168,25 @@ a { color: var(--accent); text-decoration: none; }
   background: var(--accent-soft); color: var(--accent); font-weight: 500;
 }
 
+/* Como atuo como PO */
+.po-role {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  box-shadow: var(--shadow); padding: 24px; margin-bottom: 18px;
+}
+.po-role > h3 { font-size: 17px; margin-bottom: 16px; }
+.po-steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 24px; }
+.po-steps li { position: relative; padding-left: 42px; }
+.po-num {
+  position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 14px; font-weight: 700;
+  background: var(--accent-soft); color: var(--accent);
+}
+.po-steps h4 { font-size: 15px; margin-top: 4px; }
+.po-steps p { font-size: 14px; color: var(--muted); margin-top: 2px; }
+
+@media (max-width: 860px) { .po-steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .po-steps { grid-template-columns: 1fr; } .po-role { padding: 18px 16px; } }
+
 /* Experiência */
 .timeline { list-style: none; border-left: 2px solid var(--line); margin-left: 6px; }
 .timeline li { position: relative; padding: 0 0 28px 28px; }
