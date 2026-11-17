@@ -86,3 +86,5 @@
 .cv-photo { width: 92px; height: 102px; object-fit: cover; border-radius: 10px; border: 2px solid var(--accent); }
 .cv-header-left { display: flex; gap: 18px; align-items: center; }
 @media print { .cv-photo { width: 70px; height: 78px; } }
+.cv-photo { width: 96px; height: 96px; border-radius: 50%; }
+@media print { .cv-photo { width: 76px; height: 76px; } }
