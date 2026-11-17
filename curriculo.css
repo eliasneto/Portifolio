@@ -83,3 +83,6 @@
   .cv-sheet h2 { break-after: avoid; }
   a { color: inherit; }
 }
+.cv-photo { width: 92px; height: 102px; object-fit: cover; border-radius: 10px; border: 2px solid var(--accent); }
+.cv-header-left { display: flex; gap: 18px; align-items: center; }
+@media print { .cv-photo { width: 70px; height: 78px; } }

@@ -261,3 +261,29 @@ a { color: var(--accent); text-decoration: none; }
 
 @media (max-width: 860px) { .diffs, .skills-6 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .diffs, .skills-6 { grid-template-columns: 1fr; } }
+
+/* Foto no topo */
+.hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+.hero-photo {
+  width: 200px; height: 222px; object-fit: cover; border-radius: 18px;
+  border: 3px solid var(--accent); box-shadow: 0 0 0 6px var(--accent-soft);
+}
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero-photo { order: -1; width: 128px; height: 142px; }
+}
+
+/* Estudos em andamento */
+.studies { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.studies li {
+  border: 1px dashed var(--line); border-radius: 12px; padding: 16px 18px; background: transparent;
+}
+.studies h3 { font-size: 15px; }
+.studies h3::before {
+  content: "Estudo"; display: inline-block; margin-right: 8px; padding: 1px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; vertical-align: 2px;
+  background: var(--warn-soft); color: var(--warn);
+}
+.studies p { font-size: 14px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+@media (max-width: 860px) { .studies { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .studies { grid-template-columns: 1fr; } }

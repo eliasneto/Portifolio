@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=202611171655">
+<link rel="stylesheet" href="styles.css?v=202611171705">
 </head>
 <body>
 
@@ -21,6 +21,7 @@
       <a href="#produto">Product Owner</a>
       <a href="#experiencia">Experiência</a>
       <a href="#competencias">Competências</a>
+      <a href="#estudos">Estudos</a>
       <a href="curriculo.html">Currículo</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -33,6 +34,8 @@
 <main id="inicio">
 
   <section class="hero wrap">
+    <div class="hero-grid">
+    <div>
     <p class="eyebrow">Fortaleza · CE</p>
     <h1>Elias Ferreira de Castro Neto</h1>
     <p class="role">Product Owner · Scrum Master · Analista de Processos e Automação · RPA · Integrações · IA aplicada</p>
@@ -45,6 +48,10 @@
       <a class="btn btn-primary" href="#projetos">Ver projetos</a>
       <a class="btn" href="curriculo.html">Currículo</a>
       <a class="btn" href="#contato">Contato</a>
+    </div>
+
+    </div>
+    <img class="hero-photo" src="foto.jpg" alt="Foto de Elias Ferreira de Castro Neto" width="214" height="238">
     </div>
 
     <p class="roles-label">Funções que posso exercer</p>
@@ -388,8 +395,8 @@
         <button class="project-head" aria-expanded="false">
           <div class="project-title">
             <span class="tag tag-po">Product Owner · HowBe / Speed</span>
-            <h3>Sistema de Cotação</h3>
-            <p>Gestão das cotações integrada ao ERP e ao sistema de acompanhamento de escolas.</p>
+            <h3>Sistema de Cotação e Integration Hub</h3>
+            <p>Cotação e operação em módulos, com um hub interno que centraliza as integrações com o ERP.</p>
           </div>
           <div class="project-metric"><strong>4</strong><span>versões em produção</span></div>
           <span class="chev" aria-hidden="true"></span>
@@ -398,11 +405,14 @@
           <div class="cols">
             <div>
               <h4>Contexto</h4>
-              <p>O status das cotações enviadas a Suprimentos era acompanhado à mão, em sistemas diferentes, sem uma visão única.</p>
+              <p>Cotação e operação passavam por várias áreas e sistemas, e o status era acompanhado à mão, sem uma visão única. Cada integração com o ERP IXC era feita de um jeito, sem tratamento padronizado de falhas.</p>
               <h4>Meu papel</h4>
               <ul>
-                <li>Conduzi o produto do levantamento de requisitos à implantação.</li>
-                <li>Priorizei as funcionalidades a cada versão.</li>
+                <li>Conduzi o produto do levantamento de requisitos à implantação, priorizando as funcionalidades a cada versão.</li>
+                <li>Desenhei a solução em módulos — Parceiros, Last Mile, Comercial, Financeiro, Implantação e CRM — em um sistema Django organizado por camadas.</li>
+                <li>Defini o <b>Integration Hub</b> interno: integrações IXC centralizadas, fluxos síncronos e assíncronos separados, fila com reprocessamento e política de retry.</li>
+                <li>Defini o retorno imediato para ações operacionais (como fechar uma O.S.), com acompanhamento do status da integração.</li>
+                <li>Especifiquei as permissões por módulo e por ação.</li>
                 <li>Acompanhei os testes, a homologação, o suporte e a documentação.</li>
               </ul>
             </div>
@@ -410,11 +420,12 @@
               <h4>Resultados</h4>
               <ul class="results">
                 <li><b>4 versões</b> entregues em produção</li>
-                <li>Atualização automática do status das cotações a partir do ERP IXC</li>
+                <li>Integrações com o IXC centralizadas no hub, com reprocessamento de falhas</li>
+                <li>Atualização automática do status das cotações a partir do IXC</li>
                 <li>Logs de integração para rastrear cada atualização</li>
               </ul>
               <h4>Práticas</h4>
-              <ul class="stack"><li>Requisitos</li><li>Priorização</li><li>Homologação</li><li>Integração IXC</li></ul>
+              <ul class="stack"><li>Requisitos</li><li>Priorização</li><li>Arquitetura modular</li><li>Filas e retry</li><li>Integração IXC</li><li>Homologação</li></ul>
             </div>
           </div>
         </div>
@@ -460,8 +471,8 @@
         <button class="project-head" aria-expanded="false">
           <div class="project-title">
             <span class="tag tag-po">Product Owner · MOB Telecom / Alloha</span>
-            <h3>Gateway de Pagamento</h3>
-            <p>Pagamentos via PIX e cobrança recorrente em cartão.</p>
+            <h3>Gateway de Pagamento e processos financeiros</h3>
+            <p>PIX, cartão recorrente, subadquirência, conciliação bancária e integração com o Salesforce.</p>
           </div>
           <div class="project-metric"><strong>PIX</strong><span>e cartão recorrente</span></div>
           <span class="chev" aria-hidden="true"></span>
@@ -470,7 +481,7 @@
           <div class="cols">
             <div>
               <h4>Contexto</h4>
-              <p>A operadora precisava oferecer novas formas de pagamento aos clientes, integrando parceiros de pagamento aos sistemas existentes.</p>
+              <p>A operadora precisava oferecer novas formas de pagamento aos clientes, integrar parceiros de pagamento aos sistemas existentes e dar mais controle aos processos financeiros.</p>
               <h4>Meu papel</h4>
               <ul>
                 <li>Atuei como Product Owner do projeto, alinhando negócio, parceiros e desenvolvimento.</li>
@@ -483,9 +494,12 @@
               <ul class="results">
                 <li>Pagamento via <b>PIX</b></li>
                 <li>Pagamento <b>recorrente em cartão</b></li>
+                <li><b>Subadquirência</b></li>
+                <li><b>Conciliação bancária</b></li>
+                <li>Integração das <b>bases de clientes em atraso</b> com o Salesforce</li>
               </ul>
               <h4>Práticas</h4>
-              <ul class="stack"><li>Scrum</li><li>Histórias de usuário</li><li>Jira</li><li>Homologação</li><li>Gestão de parceiros</li></ul>
+              <ul class="stack"><li>Scrum</li><li>Histórias de usuário</li><li>Jira</li><li>Homologação</li><li>Gestão de parceiros</li><li>Salesforce</li></ul>
             </div>
           </div>
         </div>
@@ -550,7 +564,7 @@
         <span class="when">05/2022 — 12/2023</span>
         <h3>Analista de Requisitos</h3>
         <p class="where">MOB Telecom / Alloha</p>
-        <p>Requisitos e regras de negócio para sistemas, portais, CRM e pagamentos; testes e homologação.</p>
+        <p>Requisitos e regras de negócio para sistemas, portais, CRM e pagamentos (gateway com PIX e cartão recorrente, subadquirência, conciliação bancária e integração com o Salesforce); testes e homologação.</p>
       </li>
       <li>
         <span class="when">07/2019 — 05/2022</span>
@@ -570,7 +584,7 @@
       </div>
       <div class="skill-card">
         <h3>Integrações</h3>
-        <ul class="stack"><li>APIs REST</li><li>SAP Business One</li><li>IXC Soft</li><li>Microsoft Graph / 365</li><li>GLPI</li><li>Jira Cloud</li><li>BlueEZ</li><li>LDAP / AD</li></ul>
+        <ul class="stack"><li>APIs REST</li><li>SAP Business One</li><li>IXC Soft</li><li>Microsoft Graph / 365</li><li>GLPI</li><li>Jira Cloud</li><li>BlueEZ</li><li>Salesforce</li><li>LDAP / AD</li></ul>
       </div>
       <div class="skill-card">
         <h3>Desenvolvimento</h3>
@@ -594,8 +608,24 @@
     <ul class="stack domains">
       <li>Telecom e provedores de internet</li><li>Instalação e atendimento</li><li>Faturamento e NF-e</li>
       <li>Financeiro e contas a pagar</li><li>Suprimentos e cotação</li><li>Comercial e CRM</li>
-      <li>Meios de pagamento (PIX e recorrência)</li><li>ERP e sistemas corporativos</li>
+      <li>Meios de pagamento (PIX e recorrência)</li><li>Subadquirência</li><li>Conciliação bancária</li>
+      <li>Last Mile e logística</li><li>ERP e sistemas corporativos</li>
       <li>Licitações e editais</li><li>Saúde pública</li>
+    </ul>
+  </section>
+
+  <section id="estudos" class="section wrap">
+    <div class="section-head">
+      <h2>Estudos em andamento</h2>
+      <p>Temas que estou aprofundando agora. <b>São estudos, não experiência profissional</b> — estão aqui para mostrar a direção do meu desenvolvimento.</p>
+    </div>
+    <ul class="studies">
+      <li><h3>SOLID e Design Patterns</h3><p>Princípios e padrões para código mais fácil de manter e evoluir.</p></li>
+      <li><h3>DDD</h3><p>Modelagem orientada ao domínio do negócio, em uma abordagem leve.</p></li>
+      <li><h3>C4 Model</h3><p>Diagramas de arquitetura em níveis: contexto, contêineres, componentes e código.</p></li>
+      <li><h3>AWS — ECS e RDS</h3><p>Execução de contêineres e banco de dados gerenciado na nuvem.</p></li>
+      <li><h3>Microsserviços</h3><p>Quando dividir um sistema, comunicação entre serviços e trade-offs em relação ao monólito modular.</p></li>
+      <li><h3>RAG</h3><p>IA que responde com base em documentos próprios, com fontes e avaliação das respostas.</p></li>
     </ul>
     <p class="edu"><b>Formação:</b> Bacharelado em Engenharia de Software — UNOPAR (2025)</p>
   </section>
@@ -616,6 +646,6 @@
   <p>© <span id="ano"></span> Elias Neto</p>
 </footer>
 
-<script src="script.js?v=202611171655"></script>
+<script src="script.js?v=202611171705"></script>
 </body>
 </html>
