@@ -233,3 +233,31 @@ a { color: var(--accent); text-decoration: none; }
   .chev { margin-left: auto; }
   .project-body { padding: 0 16px 20px; }
 }
+
+/* Sobre */
+.about { max-width: 760px; display: grid; gap: 12px; font-size: 16px; }
+.sub-head { font-size: 15px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin: 32px 0 14px; }
+.flow { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; counter-reset: passo; }
+.flow li {
+  counter-increment: passo; display: flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 14px 6px 6px; font-size: 14px; font-weight: 600;
+}
+.flow li::before {
+  content: counter(passo); display: grid; place-items: center; width: 24px; height: 24px;
+  border-radius: 50%; background: var(--accent); color: #fff; font-size: 12px;
+}
+.diffs { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.diffs li {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 18px; box-shadow: var(--shadow); border-left: 3px solid var(--accent);
+}
+.diffs h4 { font-size: 15px; }
+.diffs p { font-size: 14px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+
+/* Competências com 6 cards e domínios */
+.skills-6 { grid-template-columns: repeat(3, 1fr); }
+.domains li { font-size: 14px; padding: 5px 12px; }
+
+@media (max-width: 860px) { .diffs, .skills-6 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .diffs, .skills-6 { grid-template-columns: 1fr; } }
